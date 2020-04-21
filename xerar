@@ -1,0 +1,25 @@
+#! /bin/sh
+#+ Autor:	Ran#
+#+ Creado:	15/04/2020 13:07:22
+#+ Editado:	15/04/2020 13:07:22
+
+# se non mete as repeticións sae do programa
+if [ -z $1 ]; then
+	echo 'Pon as repeticións'
+	exit 1
+fi
+
+# se non mete o ficheiro de saída fóra
+if [ -z $2 ]; then
+	echo 'Pon o ficheiro de saída (p.e. nomes.txt)'
+	exit 1
+fi
+
+for i in $(seq 1 1 $1); do
+	# collemos un nome aleatorio
+	shuf -n 1 nomes_galegos.txt | tr '\n' ' ' >> $2
+
+	# collemos dous apelidos aleatorios un de cada vez para poder ter o mesmo repetido
+	shuf -n 1 apelidos_galegos.txt | tr '\n' ' ' >> $2
+	shuf -n 1 apelidos_galegos.txt >> $2
+done
