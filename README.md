@@ -1,7 +1,12 @@
 # NomesGalegos
 Guión para shell que xera unha lista de nomes galegos de tamaño variable dado un dataset de nomes e apelidos galegos
 
-Nomes de mostra:
+## Exemplo de execución:
+
+./xerar 10 nomes
+
+
+## Nomes de mostra:
 + Baudilio Bertólez Docobo
 + Navia Abruñedo Extremeiro
 + Licinio Foz Carricarte
